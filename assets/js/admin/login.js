@@ -20,4 +20,24 @@ $(document).ready(function(){
   });
 
   
+  /* admin user register */
+  $('#registerUser').click(function(e){
+    $(this).val('Loading...').attr('disabled',true);
+    e.preventDefault();
+
+    var user_name = $('#name').val();
+   
+    if( user_name === ''){
+      alert('0');
+    }else{
+      alert('1');
+    }
+
+    setTimeout(function(){
+      $('#registerUser').val('Register').attr('disabled',false);
+    }, 1000);
+  })
+
+  
+
 });

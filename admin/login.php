@@ -71,14 +71,14 @@
                         <div class="card p-4 card-left">
                             <h3 class="text-center text-primary font-weight-bold">Create new account</h3>
                             <hr class="my-3">
-                            <form action="post" class="px-3" id="login-form">
+                            <form action="#" method="POST" class="px-3" id="login-form">
                                 <div class="form-group input-group-lg input-group ">
                                     <div class="input-group-prepend input-icon">
                                         <span class="input-group-text">
                                         <i class="fa-solid fa-circle-user"></i>
                                         </span>
                                     </div>
-                                    <input type="text" placeholder="Enter your name" class=" form-control py-3">
+                                    <input type="text" id="name" name="name" placeholder="Enter your name" class=" form-control py-3" >
                                 </div>
                                 <div class="form-group input-group-lg input-group mt-2 ">
                                     <div class="input-group-prepend input-icon">
@@ -86,7 +86,7 @@
                                             <i class="fa-regular fa-envelope"></i>
                                         </span>
                                     </div>
-                                    <input type="email" placeholder="Enter your email" class="form-control py-3">
+                                    <input type="email" id="email" name="email" placeholder="Enter your email" class="form-control py-3" required minlength="8">
                                 </div>
                                 <div class="form-group input-group-lg input-group my-2">
                                     <div class="input-group-prepend input-icon">
@@ -94,7 +94,7 @@
                                             <i class="fa-solid fa-key"></i>
                                         </span>
                                     </div>
-                                    <input type="password" placeholder="Enter your password" class="form-control py-3">
+                                    <input type="password" placeholder="Enter your password" name="password" id="password" class="form-control py-3" required minlength="6">
                                 </div>
                                 <div class="form-group input-group-lg input-group my-2">
                                     <div class="input-group-prepend input-icon">
@@ -102,11 +102,11 @@
                                             <i class="fa-solid fa-key"></i>
                                         </span>
                                     </div>
-                                    <input type="password" placeholder="Enter your confirm password" class="form-control py-3">
+                                    <input type="password" placeholder="Enter your confirm password" name="conf-pass" id="conf-pass" class="form-control py-3" required minlength="6">
                                 </div>
                                 
                                 <div class="form-group my-4">
-                                    <input type="submit" value="Sing Up" class="btn btn-primary btn-block w-100">
+                                    <input type="submit" value="Sing Up" id="registerUser" class="btn btn-primary btn-block w-100">
                                 </div>
                             </form>
                         </div>
