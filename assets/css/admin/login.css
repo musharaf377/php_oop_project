@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background: -webkit-gradient(linear, left top, right top,color-stop(25%,#00c4cc),to(#6e44bd));
+    background: linear-gradient(90deg, #00c4cc 25%, #6e44bd);
+}
+
+.vh-100{
+    height: 100vh;
+}
+
+input.form-control {
+    height: 31px;
+}
+
+.form-group.remember {
+    display: flex;
+    justify-content: space-between;
+}
+
+.login_content{
+    background: #393A46;
+}
+
+.input-group-prepend.input-icon span i {
+    height: 20px;
+    line-height: 24px;
+}
+
