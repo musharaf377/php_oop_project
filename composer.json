@@ -1,0 +1,17 @@
+{
+    "name": "php_project/oop",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Musharaf Hossain",
+            "email": "freelancer.musharaf@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "app"
+        }
+    }
+}
