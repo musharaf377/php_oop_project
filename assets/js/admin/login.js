@@ -25,12 +25,35 @@ $(document).ready(function(){
     $(this).val('Loading...').attr('disabled',true);
     e.preventDefault();
 
-    var user_name = $('#name').val();
    
-    if( user_name === ''){
-      alert('0');
+    if($('#name').val() === ''){
+      $('#name').addClass('is-invalid');
     }else{
-      alert('1');
+      $('#name').removeClass('is-invalid');
+    }
+   
+    if($('#email').val() === ''){
+      $('#email').addClass('is-invalid');
+    }else{
+      $('#email').removeClass('is-invalid');
+    }
+   
+    if($('#password').val() === ''){
+      $('#password').addClass('is-invalid');
+    }else{
+      $('#password').removeClass('is-invalid');
+    }
+   
+    if($('#c_password').val() === ''){
+      $('#c_password').addClass('is-invalid');
+    }else{
+      $('#c_password').removeClass('is-invalid');
+    }
+
+    if($('#password').val() === $('#c_password').val()){
+      console.log('ok');
+    }else{
+      $('.passerror').html("password doesn't match");
     }
 
     setTimeout(function(){
