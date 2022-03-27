@@ -71,7 +71,7 @@
                         <div class="card p-4 card-left">
                             <h3 class="text-center text-primary font-weight-bold">Create new account</h3>
                             <hr class="my-3">
-                            <form action="#" method="POST" class="px-3" id="login-form">
+                            <form class="px-3" id="register-form">
                                 <div class="form-group input-group-lg input-group ">
                                     <div class="input-group-prepend input-icon">
                                         <span class="input-group-text">
@@ -96,9 +96,9 @@
                                             <i class="fa-solid fa-key"></i>
                                         </span>
                                     </div>
-                                    <input type="password" placeholder="Enter your password" name="password" id="password" class="form-control py-3 passerror" required minlength="6">
+                                    <input type="password" placeholder="Enter your password" name="password" id="password" class="form-control py-3" required minlength="6">
                                     <div class="invalid-feedback">This password field is required</div>
-                                    <div class="passerror_meg">Password doesn't match</div>
+                                    <div class="passerror_meg d-none">Password doesn't match</div>
                                 </div>
                                 <div class="form-group input-group-lg input-group my-2">
                                     <div class="input-group-prepend input-icon">
@@ -106,9 +106,9 @@
                                             <i class="fa-solid fa-key"></i>
                                         </span>
                                     </div>
-                                    <input type="password" placeholder="Enter your confirm password" name="c_password" id="c_password" class="form-control py-3 passerror" required minlength="6" >
+                                    <input type="password" placeholder="Enter your confirm password" name="c_password" id="c_password" class="form-control py-3" required minlength="6" >
                                     <div class="invalid-feedback">This confirm password field is required</div>
-                                    <div class="passerror_meg">Password doesn't match</div>
+                                    <div class="passerror_meg d-none">Password doesn't match</div>
                                 </div>
                                 
                                 <div class="form-group my-4">
@@ -134,7 +134,7 @@
                         <div class="card p-4 card-left">
                             <h3 class="text-center text-primary font-weight-bold">Reset your password</h3>
                             <hr class="my-3">
-                            <form action="#" method="POST" class="px-3" id="login-form">
+                            <form action="#" method="POST" class="px-3" id="forget-form">
                                 <div class="form-group input-group-lg input-group ">
                                     <div class="input-group-prepend input-icon">
                                         <span class="input-group-text">
