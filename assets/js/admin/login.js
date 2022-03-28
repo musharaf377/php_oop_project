@@ -71,7 +71,11 @@ $(document).ready(function(){
           url: site_url+"admin/action.php",
           data: data,
           success: function (response) {
-            console.log(response);
+            if(response === "ok"){
+              window.location = 'index.php';
+            }else{
+              $('#register_error').html(response);
+            }
           }
         });
 

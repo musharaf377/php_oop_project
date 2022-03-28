@@ -71,6 +71,7 @@
                         <div class="card p-4 card-left">
                             <h3 class="text-center text-primary font-weight-bold">Create new account</h3>
                             <hr class="my-3">
+                            <div id="register_error"></div>
                             <form class="px-3" id="register-form">
                                 <div class="form-group input-group-lg input-group ">
                                     <div class="input-group-prepend input-icon">
