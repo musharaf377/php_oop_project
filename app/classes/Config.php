@@ -16,6 +16,13 @@ class Config{
       die($this->conn->connect_error);
     }
   }
+
+  public function user_exists($email)
+  {
+    $result = $this->conn->query("SELECT `email` FROM `users` WHERE `email` = '$email'");
+
+    return $result->num_rows;
+  }
 }
 
 new Config();

@@ -4,8 +4,11 @@ use App\classes\Config;
 
 class Auth extends Config{
 
-  public function index()
+  public function register($name, $email, $password)
   {
-    echo "working";
+    $result = $this->conn->query("INSERT INTO `users`( `name`, `email`, `password`) VALUES ('$name', '$email', '$password')");
+
+    return $result ? true : false;
+
   }
 }
