@@ -28,7 +28,8 @@
                                             <i class="fa-regular fa-envelope"></i>
                                         </span>
                                     </div>
-                                    <input type="text" placeholder="Enter your email" class="form-control py-3">
+                                    <input type="text" placeholder="Enter your email" class="form-control py-3 is-invalid">
+                                    
                                 </div>
                                 <div class="form-group input-group-lg input-group my-2">
                                     <div class="input-group-prepend input-icon">
