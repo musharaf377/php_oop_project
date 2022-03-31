@@ -11,7 +11,7 @@
 <body>
   
 
-
+<h2>Admin dashboard </h2>
 
   <script src="../assets/js/jquery.min.js"></script>
   <script src="../assets/js/popper.min.js"></script>

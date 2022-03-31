@@ -21,6 +21,7 @@
                         <div class="card p-4 card-left">
                             <h3 class="text-center text-primary font-weight-bold">Login to your account</h3>
                             <hr class="my-3">
+                            <div id="login_error_show"></div>
                             <form action="#" method="POST" class="px-3" id="login_form">
                                 <div class="form-group input-group-lg input-group ">
                                     <div class="input-group-prepend input-icon">
@@ -28,8 +29,8 @@
                                             <i class="fa-regular fa-envelope"></i>
                                         </span>
                                     </div>
-                                    <input type="text" placeholder="Enter your email" class="form-control py-3 is-invalid">
-                                    
+                                    <input type="email" placeholder="Enter your email" id="login_email" name="login_email" class="form-control py-3 ">
+                                    <div class="invalid-feedback">This email field is required</div>
                                 </div>
                                 <div class="form-group input-group-lg input-group my-2">
                                     <div class="input-group-prepend input-icon">
@@ -37,11 +38,12 @@
                                             <i class="fa-solid fa-key"></i>
                                         </span>
                                     </div>
-                                    <input type="text" name="login_password" id="login_password" placeholder="Enter your password" class="form-control py-3">
+                                    <input type="password" name="login_password" id="login_password" placeholder="Enter your password" class="form-control py-3 ">
+                                    <div class="invalid-feedback">This password field is required. </div>
                                 </div>
                                 <div class="form-group remember">
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="rememberMe">
+                                        <input type="checkbox" name="remember" class="custom-control-input" id="rememberMe">
                                         <label for="rememberMe" class="custom-control-label mb-2">Remember me</label>
                                     </div>
                                     <div>
@@ -50,7 +52,7 @@
                                     <!-- <div class="clear-fix"></div> -->
                                 </div>
                                 <div class="form-group">
-                                    <input type="submit" value="Sing In" class="btn btn-primary btn-block w-100">
+                                    <input type="submit" value="Sing In" id="loginForm" class="btn btn-primary btn-block w-100">
                                 </div>
                             </form>
                         </div>

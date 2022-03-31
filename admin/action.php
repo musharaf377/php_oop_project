@@ -24,6 +24,38 @@ if(isset($_POST['action']) && $_POST['action'] == 'register'){
       echo $auth->showMessage('danger', 'Registration Failed');
     }
   }
+}
+
+if(isset($_POST['action']) && $_POST['action'] == 'login'){
+  // print_r($_POST);
+  $login_email = $_POST['login_email'];
+  $login_password = $_POST['login_password'];
+  $remember = isset($_POST['remember']) ? 1 : 0;
+
+  $result = $auth->user_login($login_email);
+
+  if($result->num_rows == 1){
+    $row = $result->fetch_assoc();
+
+    if(password_verify($login_password, $row['password'])){
+      if($row['status'] == 1 ){
+        echo "success";
+      }else{
+        echo $auth->showMessage('warning',"Your account doesn't active");
+
+      }
+    }else{
+      echo $auth->showMessage('danger','These Password do not match our records');
+
+    }
+
+
+
+  }else{
+   echo $auth->showMessage('danger','These credentials do not match our records');
+  }
+
+
 
 
 }

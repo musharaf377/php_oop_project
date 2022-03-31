@@ -1,6 +1,5 @@
 <?php
 namespace App\classes;
-use App\classes\Config;
 
 class Auth extends Config{
 
@@ -11,4 +10,19 @@ class Auth extends Config{
     return $result ? true : false;
 
   }
+
+  public function user_exists($email)
+  {
+    $result = $this->conn->query("SELECT `email` FROM `users` WHERE `email` = '$email'");
+
+    return $result->num_rows;
+  }
+
+  public function user_login($email)
+  {
+    $login_result = $this->conn->query("SELECT * FROM `users` WHERE `email` = '$email'");
+
+    return $login_result;
+  }
+
 }
