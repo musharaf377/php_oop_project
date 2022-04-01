@@ -1,3 +1,13 @@
+<?php
+require_once "../vendor/autoload.php";
+use App\classes\Auth;
+
+$auth  = new Auth();
+
+var_dump($auth->isLogin());
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +39,7 @@
                                             <i class="fa-regular fa-envelope"></i>
                                         </span>
                                     </div>
-                                    <input type="email" placeholder="Enter your email" id="login_email" name="login_email" class="form-control py-3 ">
+                                    <input type="email" placeholder="Enter your email" id="login_email" value="<?php echo isset($_COOKIE['email']) ? $_COOKIE['email'] : '' ?>" name="login_email" class="form-control py-3 ">
                                     <div class="invalid-feedback">This email field is required</div>
                                 </div>
                                 <div class="form-group input-group-lg input-group my-2">
@@ -38,12 +48,12 @@
                                             <i class="fa-solid fa-key"></i>
                                         </span>
                                     </div>
-                                    <input type="password" name="login_password" id="login_password" placeholder="Enter your password" class="form-control py-3 ">
+                                    <input type="password" name="login_password" id="login_password" value="<?php echo isset($_COOKIE['password']) ? $_COOKIE['password'] : '' ?>" placeholder="Enter your password" class="form-control py-3 ">
                                     <div class="invalid-feedback">This password field is required. </div>
                                 </div>
                                 <div class="form-group remember">
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" name="remember" class="custom-control-input" id="rememberMe">
+                                        <input type="checkbox" name="remember" <?php echo isset($_COOKIE['email']) ? 'checked' : '' ?> class="custom-control-input" id="rememberMe">
                                         <label for="rememberMe" class="custom-control-label mb-2">Remember me</label>
                                     </div>
                                     <div>

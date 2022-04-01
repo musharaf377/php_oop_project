@@ -3,6 +3,12 @@ namespace App\classes;
 
 class Auth extends Config{
 
+  /** 
+  *@param $name
+  *@param $email
+  *@param $password
+  *@return bool
+  */
   public function register($name, $email, $password)
   {
     $result = $this->conn->query("INSERT INTO `users`( `name`, `email`, `password`) VALUES ('$name', '$email', '$password')");
@@ -10,7 +16,10 @@ class Auth extends Config{
     return $result ? true : false;
 
   }
-
+  /**
+   * @param $email
+   * @return bool
+   */
   public function user_exists($email)
   {
     $result = $this->conn->query("SELECT `email` FROM `users` WHERE `email` = '$email'");
@@ -23,6 +32,12 @@ class Auth extends Config{
     $login_result = $this->conn->query("SELECT * FROM `users` WHERE `email` = '$email'");
 
     return $login_result;
+  }
+
+  public function isLogin()
+  {
+    session_start();
+    return isset($_SESSION['email']) ? true : false;
   }
 
 }

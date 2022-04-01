@@ -40,6 +40,17 @@ if(isset($_POST['action']) && $_POST['action'] == 'login'){
     if(password_verify($login_password, $row['password'])){
       if($row['status'] == 1 ){
         echo "success";
+
+        if($remember == 1){
+          setcookie('email', $login_email, time()+7*24*60*60);
+          setcookie('password', $login_password, time()+7*24*60*60);
+        }else{
+          setcookie('email', '', time()-7*24*60*60);
+          setcookie('password', '', time()-7*24*60*60);
+        }
+
+        $_SESSION['email'] = $login_email;
+
       }else{
         echo $auth->showMessage('warning',"Your account doesn't active");
 

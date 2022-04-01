@@ -1,3 +1,14 @@
+<?php
+
+require_once "../vendor/autoload.php";
+use App\classes\Auth;
+
+  session_start();
+
+
+ $auth = new Auth();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +23,10 @@
   
 
 <h2>Admin dashboard </h2>
+<h1><?php echo $_SESSION['email'] ?></h1>
+<h1><?php echo $_COOKIE['email'] ?></h1>
+
+<a href="logout.php">Log Out</a>
 
   <script src="../assets/js/jquery.min.js"></script>
   <script src="../assets/js/popper.min.js"></script>
