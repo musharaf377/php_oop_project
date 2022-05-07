@@ -66,7 +66,4 @@ if(isset($_POST['action']) && $_POST['action'] == 'login'){
    echo $auth->showMessage('danger','These credentials do not match our records');
   }
 
-
-
-
 }
